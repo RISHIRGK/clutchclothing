@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="a.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+</head>
+
+<body class="relative">
+
+    <nav class="sticky top-0 z-50 ">
+        <div id="offer_div" class=" flex  sticky top-0 left-0 justify-center  bg-black text-white  ring-1 ring-black ">
+            <pre onclick="close()" class="text-center tracking-tighter">BUY ONE GET ONE FREE  |  USE COUPON CODE :BOGO</pre>
+            <btn class="z-10 absolute right-0" id="close_btn" onclick="close_offer()"><img src="img/close_white_icon.svg"
+                    class="w-5 h-full hover:bg-blue-400 mr-5 "></img></btn>
+        </div>
+        <script>
+
+            function close_offer() {
+
+                var div_offer = document.getElementById('offer_div');
+
+                div_offer.style.display = 'none';
+            }
+        </script>
+        <div class="flex flex-row bg-white border border-b-2 max-w-screen-2xl mx-auto justify-between items-center">
+            <div class="basis-1/3 sm:ml-10">
+                <button  onclick="sidebar_show()" ><img src="navbar_icon/hamburger_icon.svg" class="w-10" alt=""></button>
+            </div>
+            <div class=" flex basis-1/3 justify-center">
+                <img src="img/logo_transparent.svg" class="w-40" alt="">
+            </div>
+            <!-- img/logo-no-background_font2.svg -->
+            <div class="flex basis-1/3  justify-end  sm:mr-10">
+               
+              
+               <button class="relative"  onclick="dropdown()" > <img src="img/user_icon.svg" class="w-5 sm:w-10 md:mx-4" alt="">
+                <div id="d" class="absolute hidden  top-8 md:top-12 -left-[7rem] md:-left-10 w-[8rem] h-auto  rounded-md  ring-1 ring-black shadow-lg ">
+                  <div class="flex flex-col w-full text-md rounded-md ">
+                    <div class="w-full  hover:bg-gray-200  ">Home</div>
+                    <div class="w-full   hover:bg-gray-200"><a href="login.html">My Account</a></div>
+                    <div class="w-full  hover:bg-gray-200">My Orders</div>
+                    <div class="w-full  hover:bg-gray-200">Home</div>
+
+
+                  </div>
+                </div>
+              </button>
+              <!-- <button><img src="img/fav_icon.svg" class=" w-5 sm:w-10 sm:mx-4" alt=""></button>  -->
+              <button class="relative" id="cart" onclick="sidebar_show1()" ><img src="img/cart_icon.svg" class="w-5 sm:w-10 sm:mx-4" alt=""></button>
+               
+            </div>
+        </div>
+    </nav>
+    <script>
+      function dropdown()
+      {
+        
+        var ddiv=document.getElementById('d')
+        if(ddiv.style.display=='none')
+        {
+          ddiv.style.display='block'
+        }
+        else
+        {
+          ddiv.style.display='none'
+
+        }
+      }
+        function sidebar_show()
+        {
+            var b=document.getElementById("sidebar");
+            var c=document.getElementById("sidebar_id");
+            console.log("this");
+            c.style.display="block";
+            b.style.left="0px";
+        }
+        function clse()
+        {
+            var b=document.getElementById("sidebar");
+            var c=document.getElementById("sidebar_id");
+            console.log("cs");
+            c.style.display="none";
+         
+        }
+        function sidebar_show1()
+        {
+            var b=document.getElementById("sidebar1");
+            var c=document.getElementById("sidebar_id_right");
+            console.log("this");
+            c.style.display="block";
+            b.style.right="0px";
+        }
+        function clse1()
+        {
+            var b=document.getElementById("sidebar1");
+            var c=document.getElementById("sidebar_id_right");
+            console.log("cs");
+            c.style.display="none";
+         
+        }
+    </script>
+  <div class="h-auto max-w-screen-2xl mx-auto p-12 bg-white  rounded-2xl ">
+    <div class=" flex flex-col lg:flex-row justify-evenly items-center ring-4 ring-black">
+      <div class="max-w-3/4 lg:max-w-2/3 h-full flex flex-col lg:flex-row justify-center items-center">
+        <div class="flex flex-col justify-center items-center mb-10 lg:mb-0">
+          <img
+            id="img" 
+            src="img/amzing-PhotoRoom.png-PhotoRoom.png"
+            class=" no_bg_hoodie w-40 sm:w-80 h-auto"
+            style="background: rgb(50,48,49);
+            background: radial-gradient(circle, rgba(50,48,49,1) 8%, rgba(0,0,0,0) 68%);"
+           
+            alt=""
+          />
+          <div class="text-black text-center font-bold pt-5"  style="font-family: 'Permanent Marker', cursive;">FOR MEN</div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <img
+            id="img1"
+            src="img/ww-PhotoRoom.png-PhotoRoom.png"
+            class="no_bg_hoodie w-40 sm:w-80 h-auto"
+            style="background: rgb(50,48,49);
+            background: radial-gradient(circle, rgba(50,48,49,1) 8%, rgba(0,0,0,0) 68%);"
+            alt=""
+          />
+          <div class="text-black text-center font-bold pt-5"  style="font-family: 'Permanent Marker', cursive;">FOR WOMEN</div>
+        </div>
+      </div>
+      
+      <div class="max-w-1/4 lg:max-w-1/3 h-full flex flex-col justify-center items-center text-center text-white">
+        <hr class=" m-5 lg:hidden bg-gray-600 h-[0.1rem] w-full">
+        <h1 class="font-bold text-4xl sm:text-5xl lg:text-4xl mb-4 text-black" style="font-family: 'Permanent Marker', cursive;">CLUTCH YOUR STYLE</h1>
+        <p class="w-full max-w-md lg:max-w-lg text-lg mb-8 text-black" style="font-family: 'Permanent Marker', cursive;">Your one stop solution to all your hoodie needs</p>
+        <button class="text-white w-full sm:w-1/2 py-2 px-4 rounded-lg font-bold text-xl bg-black">SHOP NOW</button>
+      </div>
+    </div>
+  </div>
+
+
+   <div class="grid grid-cols-3 grid-rows-1 max-w-screen-xl mx-auto ">
+    <div class="col-span-1 ring-1  ring-black rounded-md  m-5 flex flex-col md:flex-row  px-8 py-4  justify-center items-center">
+        <div class="basis-1/2   ">
+            <img src="img/delivery_icon.svg" class="hidden sm:block w-20" alt="">
+        </div>
+        <div class="basis-1/2 flex flex-col items-center  text-black" >
+            <div class="font-[700] text-sm">
+                Free Shipping
+            </div>
+            <div class="text-[.5rem]">
+                on order above Rs500
+            </div>
+        </div>
+        
+      
+
+    </div>
+    <div class="col-span-1 ring-1 ring-black rounded-md  m-5 flex flex-col md:flex-row px-8 py-4  justify-center items-center">
+        <div class="basis-1/2   ">
+            <img src="img/money_return_icon3.svg" class="hidden sm:block w-14 h-auto" alt="">
+        </div>
+        <div class="basis-1/2 flex flex-col  items-center text-black" >
+            <div class="font-[700] text-sm">
+               Money Returns
+            </div>
+            <div class="text-[.5rem]">
+             30 days money returns
+            </div>
+        </div>
+        
+      
+
+    </div>
+    <div class="col-span-1 ring-1 ring-black rounded-md  flex flex-col md:flex-row m-5  px-8 py-4  justify-center items-center">
+        <div class="basis-1/2   ">
+            <img src="img/customer_support_icon.svg" class="hidden sm:block  w-14 h-auto " alt="">
+        </div>
+        <div class="basis-1/2 flex flex-col  text-black" >
+            <div class="font-[700] text-sm">
+                24/7 Support
+            </div>
+            <div class="text-[.5rem]">
+                customer is our priority
+            </div>
+        </div>
+        
+      
+
+    </div>
+   </div>
+
+<div id="sidebar_id" class="   hidden w-72 md:w-96 overflow-x-hidden absolute top-0 left-0 bottom-0 z-20 h-[100%] px-4 py-8 bg-black text-white border-r rtl:border-r-0 rtl:border-l">
+    <div class="flex justify-end">
+      <button id="sidebar" class="w-6 h-6 sm:w-12 sm:h-12" onclick="clse()">
+        <img src="img/close_white_icon.svg" alt="Close icon">
+      </button>
+    </div>
+  
+    <div class="flex justify-center my-6">
+      <a href="#">
+        <img class="w-16 h-8 sm:w-60" src="img/logo_white_transparent.svg" alt="Logo">
+      </a>
+    </div>
+  
+    <nav class="flex flex-col justify-between flex-1">
+      <a class="flex items-center px-4 py-2 rounded-md hover:bg-gray-600" href="#">
+        <p class="mx-4 font-medium">WINTER SALE</p>
+      </a>
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <p class="mx-4 font-medium">NEW ARRIVALS</p>
+      </a>
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <p class="mx-4 font-medium">MEN</p>
+      </a>
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <p class="mx-4 font-medium">WOMEN</p>
+      </a>
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <p class="mx-4 font-medium">KIDS</p>
+      </a>
+  
+      <hr class="my-6 border-gray-200 dark:border-gray-600">
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <span class="mx-4 font-medium">ACCOUNT INFO</span>
+      </a>
+  
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+        <span class="mx-4 font-medium">LOG OUT</span>
+      </a>
+  
+      <a href="#" class="flex items-center p-8 mx-auto">
+        <img class="object-cover rounded-full w-20 h-20 mx-2" src="img/my_photo.jpg" alt="Avatar">
+        <span class="font-extrabold">Rishi RGK</span>
+      </a>
+    </nav>
+  </div>
+  <div id="sidebar_id_right" class=" hidden  absolute  w-72 md:w-96 overflow-x-hidden min-h-[100%] top-0 right-0 bottom-0 z-[990] h-screen px-4 py-8 bg-white text-black border-r ring-2 ring-black rtl:border-r-0 rtl:border-l">
+    <div class="flex justify-end">
+      <button id="sidebar1" class="  z-[990] w-6 h-6 sm:w-12 sm:h-12" onclick="clse1()">
+        <img src="img/close_icon_black.svg" alt="Close icon">
+      </button>
+    </div>
+  
+    <div class="flex justify-center my-6">
+      <a href="#">
+        <img class="w-16 h-8 sm:w-60" src="img/logo_transparent.svg" alt="Logo">
+      </a>
+    </div>
+    <p class="text-center font-bold text-[2rem] mt-10" style="font-family: 'Permanent Marker', cursive;">MY CART</p>
+    <div class="h-[.2rem] w-full  bg-black" ></div>
+    <div class="flex flex-col mt-10 gap-10">
+      <div class="w-[80%] mx-auto ring-1 ring-black shadow-lg rounded-xl overflow-hidden">
+        <img src="img/akatski_img.webp" class="object-cover" alt="">
+        <div class="font-normal justify-center items-center flex flex-col ">
+          <p class="font-bold uppercase p-10">Akatski_hoodie</p>
+        
+
+          <div class="flex justify-around w-full  ">
+            <p class="font-bold">quantity:2</p>
+            <p class="font-bold">Price:Rs3000</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-[80%] mx-auto ring-1 ring-black shadow-lg rounded-xl overflow-hidden">
+        <img src="img/batman_img.webp" class="object-cover" alt="">
+        <div class="font-normal justify-center items-center flex flex-col ">
+          <p class="font-bold uppercase p-10">Batman_hoodie</p>
+        
+
+          <div class="flex justify-around w-full  ">
+            <p class="font-bold">quantity:1</p>
+            <p class="font-bold">Price:Rs1500</p>
+          </div>
+        </div>
+      </div>
+        <div class="h-[.2rem] w-full  bg-black" ></div>
+      <div class="flex justify-around w-full font-bold">
+  
+        <p class="uppercase text-left ">TOTAL:</p>
+        <p class="uppercase text-left">RS4500</p>
+        
+      </div>
+    </div>
+  
+  </div>
+
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6  sm:py-12 lg:px-8">
+      <header class="text-center">
+        <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+          New Collection
+        </h2>
+  
+        <p class="max-w-md mx-auto mt-4 text-gray-500">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+          praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
+          natus?
+        </p>
+      </header>
+  
+      <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+        <li>
+          <a href="#" class="relative block ">
+            <img
+              src="img/casual_hoodies_img.jpg" alt=""
+              class="object-cover w-full transition duration-500 aspect-auto group-hover:opacity-90"
+            />
+  
+            <div
+              class="absolute inset-0 flex flex-col items-start justify-end p-6"
+            >
+              <h3 class="text-xl font-medium text-white">Casual Hoodies</h3>
+  
+              <span
+                class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+              >
+                Shop Now
+              </span>
+            </div>
+          </a>
+        </li>
+  
+        <li>
+          <a href="#" class="relative block   ">
+            <img
+              src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+              alt=""
+              class="object-cover w-full transition duration-500 aspect-video group-hover:opacity-90"
+            />
+  
+            <div
+              class="absolute inset-0 flex flex-col items-start justify-end p-6"
+            >
+              <h3 class="text-xl font-medium text-white">Winter Jumpers</h3>
+  
+              <span
+                class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+              >
+                Shop Now
+              </span>
+            </div>
+          </a>
+        </li>
+  
+        <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <a href="#" class="relative block group">
+            <img
+              src="img/men_of_culture_img.webp"
+              class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+            />
+  
+            <div
+              class="absolute inset-0 flex flex-col items-start justify-end p-6"
+            >
+              <h3 class="text-xl font-medium text-white">Hoodies For  <span class="text-white font-[800]"> MEN OF CULTURE</span> </h3>
+  
+              <span
+                class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+              >
+                Shop Now
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+        <div class="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+          <div class="max-w-md mx-auto text-center lg:text-left">
+            <header>
+              <h2 class="text-xl font-bold text-gray-900 sm:text-3xl uppercase">Classics</h2>
+  
+              <p class="mt-4 text-gray-500">
+               Classics are the range of hoodies that can be wore from scorching summer to drifting winter  
+              </p>
+            </header>
+  
+            <a
+              href="#"
+              class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+  
+        <div class="lg:col-span-2 lg:py-8">
+          <ul class="grid grid-cols-2 gap-4">
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/classic_01.webp"
+                  alt=""
+                  class="object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    classic on white
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/classic_02.webp"
+                  alt=""
+                  class="object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                  classic on black
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+      <div class="flex flex-col  md:flex-row-reverse  ">
+        <div class="flex-auto min-w-[20rem] bg-gray-100 p-6  m-4 sm:p-8 flex justify-center items-center">
+          <div class="min-w-md text-center lg:text-left">
+            <header>
+              <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">TOONS</h2>
+  
+              <p class="mt-4 text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+                rerum quam amet provident nulla error!
+              </p>
+            </header>
+  
+            <a
+              href="#"
+              class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+  
+        <div class="flex-auto lg:py-8">
+          <ul class="flex  gap-4">
+            <li class="w-1/2">
+              <a href="#" class="block group">
+                <img
+                  src="img/toons_01.webp"
+                  alt=""
+                  class="object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Mickey
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+  
+            <li class="w-1/2">
+              <a href="#" class="block group">
+                <img
+                  src="img/toons_1.webp"
+                  alt=""
+                  class="object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Banana
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+        <div class="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+          <div class="max-w-md mx-auto text-center lg:text-left">
+            <header>
+              <h2 class="text-xl font-bold text-gray-900 sm:text-3xl uppercase">CLUTCH X MARVEL</h2>
+  
+              <p class="mt-4 text-gray-500">
+               Classics are the range of hoodies that can be wore from scorching summer to drifting winter  
+              </p>
+            </header>
+  
+            <a
+              href="#"
+              class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+  
+        <div class="lg:col-span-2 lg:py-8">
+          <ul class="grid grid-cols-2 gap-4">
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/spidey_img.webp"
+                  alt=""
+                  class="no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    spidey
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/ironman_img.webp"
+                  alt=""
+                  class="no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                  Ironman
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+      <div class="flex flex-col  md:flex-row-reverse  ">
+        <div class="flex-auto min-w-[20rem] bg-gray-100 p-6  m-4 sm:p-8 flex justify-center items-center">
+          <div class="min-w-md text-center lg:text-left">
+            <header>
+              <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">CLUTCH X DC COMICS</h2>
+  
+              <p class="mt-4 text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+                rerum quam amet provident nulla error!
+              </p>
+            </header>
+  
+            <a
+              href="#"
+              class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+  
+        <div class="flex-auto lg:py-8">
+          <ul class="flex  gap-4">
+            <li class="w-1/2">
+              <a href="#" class="block group">
+                <img
+                  src="img/batman_img1.webp"
+                  alt=""
+                  class="no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Batman
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+  
+            <li class="w-1/2">
+              <a href="#" class="block group">
+                <img
+                  src="img/flash_img.webp"
+                  alt=""
+                  class="no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Flash
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+        <div class="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+          <div class="max-w-md mx-auto text-center lg:text-left">
+            <header>
+              <h2 class="text-xl font-bold text-gray-900 sm:text-3xl uppercase">ONIICHAN</h2>
+  
+              <p class="mt-4 text-gray-500">
+               Classics are the range of hoodies that can be wore from scorching summer to drifting winter  
+              </p>
+            </header>
+  
+            <a
+              href="#"
+              class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
+            >
+              Shop All
+            </a>
+          </div>
+        </div>
+  
+        <div class="lg:col-span-2 lg:py-8">
+          <ul class="grid grid-cols-2 gap-4">
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/chainsawman_img.jpg"
+                  alt=""
+                  class=" no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    chainsawman
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="block group">
+                <img
+                  src="img/akatski_img1.jpg"
+                  alt=""
+                  class=" no_bg_hoodie object-cover w-full rounded aspect-auto"
+                />
+  
+                <div class="mt-3">
+                  <h3
+                    class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                  akatski
+                  </h3>
+  
+                  <p class="mt-1 text-sm text-gray-700">Rs1500</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class=" bg-white  ring-black rounded-lg max-w-screen-xl   mx-auto z-[55] m-10">
+    <div class="flex bg-white ring-2 ring-black flex-col max-w-3/4 md:flex-row md:max-w-4/5 m-10 shadow-lg rounded-md ">
+      <div class="basis-1/2 md:basis-1/2 relative flex flex-row ">
+
+          <img src="img/nick-bolton-6Qdj1zhybB4-unsplash.jpg" class=" absolute -top-20 rounded-md shadow-md z-10 object-cover md:object-fit  shadow-black  md:my-5 md:mx-2 w-full h-[100%] " alt="" srcset="">
+          <div class="bg-gray-200 w-[100%] h-[90%] absolute -top-0 left-[2rem]  rounded-md rounded-br-3xl "></div>
+      </div>
+      <div class="basis-1/2 md:basis-1/2 pl-10 overflow-hidden ">
+          <div class="flex flex-col p-8">
+              
+              <h5 class="my-8 text-xl  text-black  font-bold"> NEW SPRING ARRIVAL</h5>
+              <p class="mb-4 text-base text-black  ">All new hoddies focusing on the trecking enthusiast 
+                get upto <span class="font-bold">40% OFF </span> on your  First Spring range Hoodies
+              </p>
+              <button class="bg-black text-white min-w-[20%] xl:max-w-[30%] py-5 px-8 rounded-lg" >shop now</button>
+          </div>
+      </div>
+  </div>
+  </div>
+
+    <div class="grid grid-rows-2 grid-cols-1  max-w-screen-2xl mx-auto items-center  justify-center">
+        <img src="img/img1.webp" class=" w-full sm:px-20    rounded-sm  " alt="">
+        <img src="img/img2.webp" class=" w-full sm:px-20 " alt="">
+        
+    </div>
+    <p class="text-center text-white bg-black font-extrabold  text-[2rem] mt-20 max-w-screen-2xl rounded-full mx-auto ring-1 ring-black" style="font-family: 'Permanent Marker', cursive;">REVIEWS</p>
+    <div class="flex flex-wrap max-w-screen-2xl mt-20  mx-auto justify-center ring-2 ring-black py-20 rounded-xl gap-5 items-center">
+        <div class="w-[20rem] flex rounded-xl  shadow-lg shadow-black ">
+          <div class="flex flex-col py-10 px-5">
+            <div class="flex justify-center"><img src="img/fb-1.png" class="object-cover m-3 h-[8rem] rounded-full" alt=""></div>
+        <p>" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eaque?"</p>
+          <p class="text-right" style="font-family: 'Permanent Marker', cursive;">-ketan parikh</p>
+          </div>
+          
+        </div>
+        <div class="w-[20rem] flex rounded-xl  shadow-lg shadow-black ">
+          <div class="flex flex-col py-10 px-5">
+            <div class="flex justify-center"><img src="img/fb-2.png" class="object-cover m-3 h-[8rem] rounded-full" alt=""></div>
+
+        <p>" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eaque?"</p>
+          <p class="text-right" style="font-family: 'Permanent Marker', cursive;">-rahul shah</p>
+          </div>
+          
+        </div>
+        <div class="w-[20rem] flex rounded-xl  shadow-lg shadow-black ">
+          <div class="flex flex-col py-10 px-5">
+            <div class="flex justify-center"><img src="img/fb-3.jpeg" class="object-cover h-[8rem] m-3 rounded-full" alt=""></div>
+
+        <p>" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eaque?" </p>
+          <p class="text-right" style="font-family: 'Permanent Marker', cursive;">-shruti sharma</p>
+          </div>
+          
+        </div>
+        <div class="w-[20rem] flex rounded-xl  shadow-lg shadow-black ">
+          <div class="flex flex-col py-10 px-5">
+            <div class="flex  justify-center"><img src="img/fb-4.jpeg" class="object-cover m-3 h-[8rem] rounded-full" alt=""></div>
+          
+        <p>" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eaque?"</p>
+          <p class="text-right" style="font-family: 'Permanent Marker', cursive;">-neha mistry</p>
+          </div>
+          
+        </div>
+        
+    </div>
+  
+    <footer class="bg-white relative left-0 bottom-0">
+      <div class="max-w-screen-xl mx-auto h-[.2rem] bg-black mt-10"></div>
+        <div class="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-md">
+                <strong class="block text-center  text-xl  font-bold text-gray-900 sm:text-md">
+                    SUBSCRIBE TO OUR NEWSLETTER AND GET A <span class="hover:underline  hover:">10% DISCOUNT</span>
+                    COUPON FOR YOUR FIRST PURCHASE!
+                </strong>
+
+                <form class="mt-6">
+                    <div class="relative max-w-lg">
+                        <label class="sr-only" for="email"> Email </label>
+
+                        <input class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium"
+                            id="email" type="email" placeholder="john@doe.com" />
+
+                        <button
+                            class="absolute top-1/2 right-1 -translate-y-1/2 rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800 ">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+                <div class="mx-auto max-w-sm lg:max-w-none">
+                    <p class="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+                        Founded in 2019, CLUTCH® is a lifestyle fashion brand that makes creative, distinctive fashion
+                        for the trendy, contemporary Indian. Bewakoof® was created on the principle of creating impact
+                        through innovation, honesty and thoughtfulness.
+
+                        With a team of 400 members, and 2mn products sold till date. We like to experiment freely, which
+                        allows us to balance creativity and relatability, and our innovative designs.
+                    </p>
+
+                    <div class="flex flex-row gap-2 pt-2   ">
+                        <div class="  flex flex-row cursor-pointer   ">
+                            <img class="rounded-full  bg-[#cddde9] w-[2rem] hover:bg-[#3b5998]"
+                                src="footer_img/facebook-logo.svg" alt="sorry img not available">
+                        </div>
+                        <div class=" flex flex-row cursor-pointer ">
+                            <img class=" rounded-full  bg-[#cddde9] w-[2rem] hover:bg-[#bb0000]"
+                                src="footer_img/youtube-logo.svg" alt="sorry img not available">
+                        </div>
+                        <div class="  flex flex-row cursor-pointer ">
+                            <img class=" rounded-full  bg-[#cddde9]  w-[2rem] hover:bg-[#e1306c]"
+                                src="footer_img/instagram-logo.svg" alt="sorry img not available">
+                        </div>
+                        <div class=" font-medium flex flex-row cursor-pointer ">
+                            <img class=" rounded-full bg-[#cddde9]  w-[2rem] hover:bg-[#0077b5]"
+                                src="footer_img/linkedin-logo.svg" alt="sorry img not available">
+                        </div>
+                        <div class=" font-medium flex flex-row cursor-pointer  ">
+                            <img class=" rounded-full bg-[#cddde9] w-[2rem] hover:bg-[#00aced]"
+                                src="footer_img/twitter-logo.svg" alt="sorry img not available">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
+                    <div>
+                        <strong class="font-medium text-gray-900"> CUSTOMER SERVICE </strong>
+
+                        <nav aria-label="Footer Services Nav" class="mt-6 flex flex-col space-y-1">
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Contact Us
+                            </a>
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Track Order
+                            </a>
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Return Order
+                            </a>
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Cancel Order
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <strong class="font-medium text-gray-900"> COMPANY </strong>
+
+                        <nav class="mt-6 flex flex-col space-y-1">
+
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Careers
+                            </a>
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Terms & Conditions
+                            </a>
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Privacy Policy
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <strong class="font-medium text-gray-900"> Support </strong>
+
+                        <nav aria-label="Footer Support Nav" class="mt-6 flex flex-col space-y-1">
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                FAQs
+                            </a>
+
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Contact
+                            </a>
+
+                            <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Live Chat
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 border-t border-gray-100 pt-8">
+                <p class="text-center text-xs leading-relaxed text-gray-500">
+                    © 2023 CLUTCH | All rights reserved.
+
+                    <br />
+
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
