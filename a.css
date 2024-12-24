@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no_bg_hoodie
+{
+    animation-name: aa;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+ 
+}
+
+@keyframes aa {
+    0%
+    {
+        transform: translateY(2px);
+    }
+    50%
+    {
+        transform: translateY(0px);
+    }
+    100%
+    {
+        transform: translateY(2px);
+    }
+}
+#img1
+{
+    animation-name: a1;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes a1 {
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(2px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
