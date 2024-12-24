@@ -18,7 +18,7 @@
 
 <body class="relative">
 
-    <nav class="sticky top-0 z-50 ">
+    <nav class="sticky top-0 z-[5] ">
         <div id="offer_div" class=" flex  sticky top-0 left-0 justify-center  bg-black text-white  ring-1 ring-black ">
             <pre onclick="close()" class="text-center tracking-tighter">BUY ONE GET ONE FREE  |  USE COUPON CODE :BOGO</pre>
             <btn class="z-10 absolute right-0" id="close_btn" onclick="close_offer()"><img src="img/close_white_icon.svg"
@@ -83,14 +83,16 @@
             var c=document.getElementById("sidebar_id");
             console.log("this");
             c.style.display="block";
-            b.style.left="0px";
+            c.style.left="0px";
         }
         function clse()
         {
             var b=document.getElementById("sidebar");
             var c=document.getElementById("sidebar_id");
             console.log("cs");
-            c.style.display="none";
+            c.style.left="-24rem";
+
+            // c.style.display="none";
          
         }
         function sidebar_show1()
@@ -106,7 +108,7 @@
             var b=document.getElementById("sidebar1");
             var c=document.getElementById("sidebar_id_right");
             console.log("cs");
-            c.style.display="none";
+            // c.style.display="none";
          
         }
     </script>
@@ -199,7 +201,7 @@
     </div>
    </div>
 
-<div id="sidebar_id" class="   hidden w-72 md:w-96 overflow-x-hidden absolute top-0 left-0 bottom-0 z-20 h-[100%] px-4 py-8 bg-black text-white border-r rtl:border-r-0 rtl:border-l">
+<div id="sidebar_id" class="   block w-72 md:w-96 transition-all duration-300 overflow-x-hidden absolute top-0 left-[-24rem] bottom-0 z-20 h-[100%] px-4 py-8 bg-black text-white border-r rtl:border-r-0 rtl:border-l">
     <div class="flex justify-end">
       <button id="sidebar" class="w-6 h-6 sm:w-12 sm:h-12" onclick="clse()">
         <img src="img/close_white_icon.svg" alt="Close icon">
