@@ -108,7 +108,7 @@
             var b=document.getElementById("sidebar1");
             var c=document.getElementById("sidebar_id_right");
             console.log("cs");
-            // c.style.display="none";
+            c.style.display="none";
          
         }
     </script>
@@ -201,8 +201,8 @@
     </div>
    </div>
 
-<div id="sidebar_id" class="   block w-72 md:w-96 transition-all duration-300 overflow-x-hidden absolute top-0 left-[-24rem] bottom-0 z-20 h-[100%] px-4 py-8 bg-black text-white border-r rtl:border-r-0 rtl:border-l">
-    <div class="flex justify-end">
+<div id="sidebar_id" class="   block w-72 md:w-96 transition-all duration-300 overflow-x-hidden fixed   top-0 left-[-24rem] bottom-0 z-20 h-[100%] px-4 py-8 bg-black text-white border-r rtl:border-r-0 rtl:border-l">
+  <div class="flex justify-end">
       <button id="sidebar" class="w-6 h-6 sm:w-12 sm:h-12" onclick="clse()">
         <img src="img/close_white_icon.svg" alt="Close icon">
       </button>
@@ -219,29 +219,29 @@
         <p class="mx-4 font-medium">WINTER SALE</p>
       </a>
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <p class="mx-4 font-medium">NEW ARRIVALS</p>
       </a>
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <p class="mx-4 font-medium">MEN</p>
       </a>
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <p class="mx-4 font-medium">WOMEN</p>
       </a>
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <p class="mx-4 font-medium">KIDS</p>
       </a>
   
       <hr class="my-6 border-gray-200 dark:border-gray-600">
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <span class="mx-4 font-medium">ACCOUNT INFO</span>
       </a>
   
-      <a class="flex items-center px-4 py-2 mt-5 rounded-md transition-colors duration-300 transform" href="#">
+      <a class="flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-600 transition-colors duration-300 transform" href="#">
         <span class="mx-4 font-medium">LOG OUT</span>
       </a>
   
@@ -251,7 +251,7 @@
       </a>
     </nav>
   </div>
-  <div id="sidebar_id_right" class=" hidden  absolute  w-72 md:w-96 overflow-x-hidden min-h-[100%] top-0 right-0 bottom-0 z-[990] h-screen px-4 py-8 bg-white text-black border-r ring-2 ring-black rtl:border-r-0 rtl:border-l">
+  <div id="sidebar_id_right" class=" hidden  fixed  w-72 md:w-96 overflow-x-hidden min-h-[100%] top-0 right-0 bottom-0 z-[990] h-screen px-4 py-8 bg-white text-black border-r ring-2 ring-black rtl:border-r-0 rtl:border-l">
     <div class="flex justify-end">
       <button id="sidebar1" class="  z-[990] w-6 h-6 sm:w-12 sm:h-12" onclick="clse1()">
         <img src="img/close_icon_black.svg" alt="Close icon">
